@@ -1,6 +1,6 @@
 .element__like {
     grid-area: like;
-    background-image: url(./images/elements/like.svg);
+    background-image: url(../../../images/elements/like.svg);
     align-self: center;
     max-width: 22px;
     width: 100%;

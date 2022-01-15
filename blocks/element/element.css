@@ -1,5 +1,5 @@
 .element {
-    border: olive solid 1px;
+/*    border: olive solid 1px;*/
     display: grid;
     grid-template-columns: 282px;
     grid-template-rows: 282px 79px;

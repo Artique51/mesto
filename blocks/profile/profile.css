@@ -1,7 +1,7 @@
 .profile {
     max-width: 880px;
     width: 100%;
-    border: 1px blue solid;
+/*    border: 1px blue solid;*/
     display: grid;
     grid-template-columns: 120px 336px minmax(150px, 1fr);
     gap: 30px;
