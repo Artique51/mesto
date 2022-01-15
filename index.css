@@ -1,133 +1,64 @@
-.page {
-    font-family: "inter", "Arial", sans-serif;
-    max-width: 100%;
-    min-width: 320px;
-    background-color:#000000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-}
+@import url(./vendor/normalize.css);
+@import url(./fonts/fonts.css);
+@import url(./blocks/page/page.css);
+@import url(./blocks/header/header.css);
+@import url(./blocks/header/__logo/header__logo.css);
+@import url(./blocks/content/content.css);
+@import url(./blocks/profile/profile.css);
+@import url(./blocks/profile/__avatar/profile__avatar.css);
+@import url(./blocks/profile/__info/profile__info.css);
+@import url(./blocks/profile/__info-name/profile__info-name.css);
+@import url(./blocks/profile/__info-status/profile__info-status.css);
+@import url(./blocks/profile/__edit-button/profile__edit-button.css);
+@import url(./blocks/profile/__add-button/profile__add-button.css);
+@import url(./blocks/elements/elements.css);
+@import url(./blocks/element/element.css);
+@import url(./blocks/element/__image/element__image.css);
+@import url(./blocks/element/__name/element__name.css);
+@import url(./blocks/element/__title/element__title.css);
+@import url(./blocks/element/__like/element__like.css);
+@import url(./blocks/popup/popup.css);
+@import url(./blocks/popup/_opened/popud_opened.css);
+@import url(./blocks/popup/__container/poput__container.css);
+@import url(./blocks/popup/__title/popup__title.css);
+@import url(./blocks/popup/__form/popup__form.css);
+@import url(./blocks/popup/__input-name/popup__input-name.css);
+@import url(./blocks/popup/__input-status/popup__input-status.css);
+@import url(./blocks/popup/__save/popup__save.css);
+@import url(./blocks/popup/__close/popup__close.css);
+@import url(./blocks/footer/footer.css);
+@import url(./blocks/footer/__copyright/footer__copyright.css);
 
-.header {
-    border: 1px yellow solid;
-    max-width: 880px;
-    width: 100%;
-    height: 74px;
-    margin: 45px auto 40px;
-    display: flex;
-    border-bottom: 1px solid rgb(84, 84, 84, 0.7);
-}
 
-.header__logo {
-    border: 1px blue solid;
-    width: 142px;
-    height: 33px;
-    margin: 0;
-}
 
-/*@media screen and (max-width: 896px) {
-    .header{
-        max-width: 720px;
-    }
-}*/
 
-@media screen and (max-width: 544px) {
-    .header{
-        max-width: 320px;
-        height: 56px;
-        margin: 28px auto 42px;
-    }
-    .header__logo {
-        margin: 0 0 0 27px;
-    }
-}
 
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-.profile {
-    max-width: 880px;
-    border: 1px blue solid;
-    display: grid;
-    grid-template-columns: 120px 336px 364px;
-    gap: 30px;
-    grid-template-areas:
-    "avatar info add-button";
-}
 
-.profile__avatar{
-    grid-area: avatar;
-    border-radius: 100%;
-}
 
-.profile__info{
-    display: grid;
-    align-self: center;
-    grid-template-columns: 294px 24px;
-    grid-template-rows: 40px 18px;
-    grid-area: info;
-    grid-template-areas:
-    "name edit-button"
-    "status status";
-    gap: 18px;
-}
 
-.profile__info-name {
-    align-self: center;
-    grid-area: name;
-    line-height: 48px;
-    font-size: 42px;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    font-weight: 500;
-    color: #FFFFFF;
-    
-}
 
-.profile__info-status {
-    grid-area: status;
-    line-height: 22px;
-    font-size: 18px;
-    text-align: left;
-    margin: 0 auto 0;
-    font-weight: normal;
-    color: #FFFFFF;
-    margin: 0;
-    padding: 0;
-}
 
-.profile__edit-button {
-    grid-area: edit-button;
-    background-image: url(./images/profile/Edit\ Button.svg);
-    background-color: #000000;
-    background-position: center;
-    border: 2px solid #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 2px;
-    max-width: 24px;
-    width: 100%;
-    max-height: 24px;
-    height: 100%;
-    margin: auto auto 0 auto;
-}
 
-.profile__add-button{
-    grid-area: add-button;
-    background-color: #000000;
-    background-position: center;
-    border: 1px solid #FFFFFF;
-    box-sizing: border-box;
-    background-image: url(./images/profile/Add\ Button.svg);
-    max-width: 150px;
-    width: 100%;
-    max-height: 50px;
-    height: 100%;
-    justify-self: end;
-    align-self: center;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

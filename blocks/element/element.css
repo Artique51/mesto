@@ -1,0 +1,13 @@
+.element {
+    border: olive solid 1px;
+    display: grid;
+    grid-template-columns: 282px;
+    grid-template-rows: 282px 79px;
+    grid-template-areas: 
+    "image"
+    "name";
+    gap: 0;
+    background-color:#FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+}
