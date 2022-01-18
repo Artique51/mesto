@@ -13,7 +13,8 @@
     justify-self: end;
     align-self: center;
     opacity: 1;
-    transition: opacity .1 linear;
+    transition: opacity .1s linear;
+    border-radius: 2px;
 }
 
 .profile__add-button:hover {

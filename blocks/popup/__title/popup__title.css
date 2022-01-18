@@ -1,8 +1,7 @@
 .popup__title {
     max-width: 330px;
     width: 100%;
-    height: 23px;
-    margin: 34px 64px 54px 36px;
+    margin: 34px 64px 48px 36px;
     color: #000000;
     padding: 0;
     line-height: 29px;
@@ -14,10 +13,7 @@
     .popup__title {
         width: 238px;
         margin: 25px 22px 75px;
-        color: #000000;
-        padding: 0;
         line-height: 22px;
         font-size: 18px;
-        font-weight: 900;
     }
 }

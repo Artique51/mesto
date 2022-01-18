@@ -6,10 +6,11 @@
     border: none;
     background-color: #000000;
     z-index: 3;
-    margin: -40px;
+    top: -40px;
+    right: -40px;
     padding: 0;
     opacity: 1;
-    transition: opacity .1 linear;
+    transition: opacity .1s linear;
 }
 
 .popup__close:hover {
@@ -20,9 +21,10 @@
 @media screen and (max-width: 680px) {
     .popup__close {
         width: 20px;
-      height: 20px;
-      background-size: cover;
-       z-index: 3;
-       margin: -36px 0 0 0;
+        height: 20px;
+        background-size: cover;
+        z-index: 3;
+        top: -36px;
+        right: 0;
     }
 }
