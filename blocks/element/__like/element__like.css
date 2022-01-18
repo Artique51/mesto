@@ -10,6 +10,8 @@
     transition: opacity .1s linear;
     object-fit: fill;
     border: none;
+    background-color: #FFF;
+    background-repeat: no-repeat;
 }
 
 .element__like:hover {
