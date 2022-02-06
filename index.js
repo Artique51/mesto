@@ -1,22 +1,9 @@
 
 const elementsContainer = document.querySelector('.elements');
 const popup = document.querySelector ('.popup');
-const page = document.querySelector('.page');
-
-/*let popup2 = document.querySelector ('.popup__double_block');
-let closeButton2 = popup2.querySelector ('.popup__close');
-let nameInput = document.querySelector ('.popup__input_value_name');
-let jobInput = document.querySelector ('.popup__input_value_status');
-let profileUserName = document.querySelector ('.profile__info-name');
-let profileUserStatus = document.querySelector ('.profile__info-status');
-let addButton = document.querySelector ('.profile__add-button');
-let deleteButton = document.querySelector ('.element__delete');
-let profilePlaceName = document.querySelector('.popup__input_element_name');
-let profilePlacePicture = document.querySelector('.popup__input_value_picture');
-let profileNew = document.querySelector('.popup__input');*/
 
 // первый попап(изменение имени и статуса)
-const popupEditNameStatus = document.querySelector ('.popup__first_block');
+const popupEditNameStatus = document.querySelector ('.popup__edit-profile');
 const nameInput = document.querySelector ('.popup__input_value_name');
 const jobInput = document.querySelector ('.popup__input_value_status');
 const profileUserName = document.querySelector ('.profile__info-name');
@@ -24,7 +11,7 @@ const profileUserStatus = document.querySelector ('.profile__info-status');
 const formElement = document.querySelector('.popup__form');
 
 // второй попап (добавление карточек)
-const popupAddNameLink = document.querySelector ('.popup__double_block');
+const popupAddNameLink = document.querySelector ('.popup__add-element');
 const profilePlaceName = popupAddNameLink.querySelector('.popup__input_value_element-name');
 const profilePlacePicture = popupAddNameLink.querySelector('.popup__input_value_element-picture');
 const profileAddForm = popupAddNameLink.querySelector('.popup__form');
@@ -38,7 +25,7 @@ const addButton = document.querySelector ('.profile__add-button');
 const deleteButton = document.querySelector ('.element__delete');
 
 //переменные попапа image-fullsize
-const popupImageFullsize = document.querySelector('.popup_value_fullsize');
+const popupImageFullsize = document.querySelector('.popup_value-fullsize');
 const popupImageFullsizeImage = popupImageFullsize.querySelector('.popup__fullsize-image');
 const popupImageFullsizeNameImage = popupImageFullsize.querySelector('.popup__fullsize-image-name');
 const closeButtonpopupImageFullsize = popupImageFullsize.querySelector('.popup__close');

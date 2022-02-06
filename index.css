@@ -23,7 +23,7 @@
 @import url(./blocks/popup/popup.css);
 @import url(./blocks/popup/_opened/popup_opened.css);
 @import url(./blocks/popup/__container/popup__container.css);
-@import url(./blocks/popup/__container_fullsize/popup__container_fullsize.css);
+@import url(./blocks/popup/__container-fullsize/popup__container-fullsize.css);
 @import url(./blocks/popup/__fullisize-image/popup__fullsize-image.css);
 @import url(./blocks/popup/__fullsize-image-name/popup__fullsize-image-name.css);
 @import url(./blocks/popup/__fullsize/);
