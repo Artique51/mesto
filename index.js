@@ -3,7 +3,7 @@ const elementsContainer = document.querySelector('.elements');
 const popup = document.querySelector ('.popup');
 
 // первый попап(изменение имени и статуса)
-const popupEditNameStatus = document.querySelector ('.popup__edit-profile');
+const popupEditNameStatus = document.querySelector ('.popup_edit-profile');
 const nameInput = document.querySelector ('.popup__input_value_name');
 const jobInput = document.querySelector ('.popup__input_value_status');
 const profileUserName = document.querySelector ('.profile__info-name');
@@ -11,7 +11,7 @@ const profileUserStatus = document.querySelector ('.profile__info-status');
 const formElement = document.querySelector('.popup__form');
 
 // второй попап (добавление карточек)
-const popupAddNameLink = document.querySelector ('.popup__add-element');
+const popupAddNameLink = document.querySelector ('.popup_add-element');
 const profilePlaceName = popupAddNameLink.querySelector('.popup__input_value_element-name');
 const profilePlacePicture = popupAddNameLink.querySelector('.popup__input_value_element-picture');
 const profileAddForm = popupAddNameLink.querySelector('.popup__form');
