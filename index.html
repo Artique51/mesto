@@ -26,54 +26,12 @@
                 <button type="button" class="profile__add-button"></button>
             </section>
             <section class="elements">
-                <div class="element">
-                    <img class="element__image" src="./images/elements/karachaevsk.png" alt="Карачаевск">
-                    <div class="element__name">
-                        <h2 class="element__title">Карачаевск</h2>
-                        <button type="button" class="element__like"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img class="element__image" src="./images/elements/elbrus.png" alt="Гора Эльбрус">
-                    <div class="element__name">
-                        <h2 class="element__title">Гора Эльбрус</h2>
-                        <button type="button" class="element__like"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img class="element__image" src="./images/elements/dombay.png" alt="Домбай">
-                    <div class="element__name">
-                        <h2 class="element__title">Домбай</h2>
-                        <button type="button" class="element__like"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img class="element__image" src="./images/elements/elbrus.png" alt="Гора Эльбрус">
-                    <div class="element__name">
-                        <h2 class="element__title">Гора Эльбрус</h2>
-                        <button type="button" class="element__like"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img class="element__image" src="./images/elements/проба.jpg" alt="Домбай">
-                    <div class="element__name">
-                        <h2 class="element__title">Домбай</h2>
-                        <button type="button" class="element__like"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img class="element__image" src="./images/elements/karachaevsk.png" alt="Карачаевск">
-                    <div class="element__name">
-                        <h2 class="element__title">Карачаево-Черкизово</h2>
-                        <button type="button" class="element__like"></button>
-                    </div>
-                </div>
             </section>
         </main>
         <footer class="footer">
             <p class="footer__copyright">&copy;2022 Mesto Russia</p>
         </footer>
-        <div class="popup">
+        <div class="popup popup__first_block">
             <div class="popup__container">
                 <h2 class="popup__title">Редактировать профиль</h2>
                 <form name="popup_info" class="popup__form">
@@ -84,6 +42,34 @@
                 <button type="button" class="popup__close"></button>
             </div>
         </div>
+        <div class="popup popup__double_block">
+            <div class="popup__container">
+                <h2 class="popup__title">Новое место</h2>
+                <form name="popup_info" class="popup__form">
+                    <input type="text" value="" name="placeName" placeholder="Название" class="popup__input popup__input_value_element-name">
+                    <input type="text" value="" name="linkPlacePicture" placeholder="Ссылка на картинку" class="popup__input popup__input_value_element-picture">
+                    <button type="submit" class="popup__save">Создать</button>
+                </form>
+                <button type="button" class="popup__close"></button>
+            </div>
+        </div>
+        <div class="popup popup_value_fullsize">
+            <div class="popup__container_fullsize">
+              <img class="popup__fullsize-image" src="self" alt="">
+              <p class="popup__fullsize-image-name"></p>
+              <button class="popup__close" type="button"></button>
+            </div>
+          </div>
+        <template id="elements">
+            <div class="element__card">
+              <img class="element__image" src="" alt="">
+              <div class="element__name">
+                <h2 class="element__title"></h2>
+                <button type="button" class="element__like"></button>
+              </div>
+              <button type="button" class="element__delete"></button>
+            </div>
+        </template> 
     </div>
     <script src="index.js"></script>
 </body>
