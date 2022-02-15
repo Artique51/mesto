@@ -3,8 +3,8 @@
     background-color: #FFF;
     color: rgba(0, 0, 0, .2);
     cursor: default;
-};
+}
     
 .popup__save_disabled:hover {
     cursor: default;
-};
+}
