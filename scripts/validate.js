@@ -61,9 +61,9 @@ const hasInvalidInput = (inputList) => {
 
 const toggleButtonState = (inputList, buttonElement, config) => {
   if (hasInvalidInput(inputList)) {
-  saveButtonDisabled(buttonElement, config);
+    saveButtonDisabled(buttonElement, config);
   } else {
-  saveButtonActive(buttonElement, config);
+    saveButtonActive(buttonElement, config);
   };
 };
 
