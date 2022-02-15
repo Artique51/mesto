@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Места России</title>
     <link rel="stylesheet" href="./pages/index.css">
-    </head>
+</head>
 
 <body>
     <div class="page">
@@ -34,9 +34,17 @@
         <div class="popup popup_edit-profile">
             <div class="popup__container">
                 <h2 class="popup__title">Редактировать профиль</h2>
-                <form name="popup_info" class="popup__form">
-                    <input type="text" value="" name="profileName" class="popup__input popup__input_value_name">
-                    <input type="text" value="" name="profileStatus" class="popup__input popup__input_value_status">
+                <form name="popup_info" class="popup__form" novalidate>
+                    <label class="form__label">
+                        <input type="text" value="" name="profileName" id="name-input"
+                            class="popup__input popup__input_value_name" minlength="2" maxlength="40" required>
+                        <span class="popup__input-error name-input-error"></span>
+                    </label>
+                    <label class="form__label">
+                        <input type="text" value="" name="profileStatus" id="status-input"
+                            class="popup__input popup__input_value_status" minlength="2" maxlength="200" required>
+                        <span class="popup__input-error status-input-error"></span>
+                    </label>
                     <button type="submit" class="popup__save">Сохранить</button>
                 </form>
                 <button type="button" class="popup__close"></button>
@@ -46,8 +54,17 @@
             <div class="popup__container">
                 <h2 class="popup__title">Новое место</h2>
                 <form name="popup_info" class="popup__form">
-                    <input type="text" value="" name="placeName" placeholder="Название" class="popup__input popup__input_value_element-name">
-                    <input type="text" value="" name="linkPlacePicture" placeholder="Ссылка на картинку" class="popup__input popup__input_value_element-picture">
+                    <label class="form__label">
+                        <input type="text" value="" name="placeName" id="place-input" placeholder="Название"
+                            class="popup__input popup__input_value_element-name" minlength="2" maxlength="30" required>
+                        <span class="popup__input-error place-input-error"></span>
+                    </label>
+                    <label class="form__label">
+                        <input type="url" value="" name="linkPlacePicture" id="link-input"
+                            placeholder="Ссылка на картинку" class="popup__input popup__input_value_element-picture"
+                            required>
+                        <span class="popup__input-error link-input-error"></span>
+                    </label>
                     <button type="submit" class="popup__save">Создать</button>
                 </form>
                 <button type="button" class="popup__close"></button>
@@ -55,23 +72,24 @@
         </div>
         <div class="popup popup_value-fullsize">
             <div class="popup__container-fullsize">
-              <img class="popup__fullsize-image" src=" " alt="">
-              <p class="popup__fullsize-image-name"></p>
-              <button class="popup__close" type="button"></button>
+                <img class="popup__fullsize-image" src=" " alt="">
+                <p class="popup__fullsize-image-name"></p>
+                <button class="popup__close" type="button"></button>
             </div>
-          </div>
+        </div>
         <template id="elements">
             <div class="element__card">
-              <img class="element__image" src=" " alt="">
-              <div class="element__name">
-                <h2 class="element__title"></h2>
-                <button type="button" class="element__like"></button>
-              </div>
-              <button type="button" class="element__delete"></button>
+                <img class="element__image" src=" " alt="">
+                <div class="element__name">
+                    <h2 class="element__title"></h2>
+                    <button type="button" class="element__like"></button>
+                </div>
+                <button type="button" class="element__delete"></button>
             </div>
-        </template> 
+        </template>
     </div>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/validate.js"></script>
 </body>
 
 </html>

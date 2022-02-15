@@ -1,6 +1,6 @@
 
 const elementsContainer = document.querySelector('.elements');
-const popup = document.querySelector('.popup');
+const page = document.querySelector('.page');
 
 // первый попап(изменение имени и статуса)
 const popupEditNameStatus = document.querySelector('.popup_edit-profile');
@@ -8,7 +8,7 @@ const nameInput = document.querySelector('.popup__input_value_name');
 const jobInput = document.querySelector('.popup__input_value_status');
 const profileUserName = document.querySelector('.profile__info-name');
 const profileUserStatus = document.querySelector('.profile__info-status');
-const formElement = document.querySelector('.popup__form');
+const popupEditUserForm = document.querySelector('.popup__form');
 
 // второй попап (добавление карточек)
 const popupAddNameLink = document.querySelector('.popup_add-element');
@@ -23,20 +23,40 @@ const closeButtonNameLink = popupAddNameLink.querySelector('.popup__close');
 const likeButton = document.querySelector('.element__like');
 const addButton = document.querySelector('.profile__add-button');
 const deleteButton = document.querySelector('.element__delete');
+const popupSubmitButton = popupAddNameLink.querySelector('.form__button-submit');
 
 //переменные попапа image-fullsize
-const popupImageFullsize = document.querySelector('.popup_value-fullsize');
+const popupImageFullsize = page.querySelector('.popup_value-fullsize');
 const popupImageFullsizeImage = popupImageFullsize.querySelector('.popup__fullsize-image');
 const popupImageFullsizeNameImage = popupImageFullsize.querySelector('.popup__fullsize-image-name');
-const closeButtonpopupImageFullsize = popupImageFullsize.querySelector('.popup__close');
+const closeButtonPopupImageFullsize = popupImageFullsize.querySelector('.popup__close');
 
 //добавление функций
-function openPopup(popupElement) {
-  popupElement.classList.add('popup_opened');
+function openPopup (element) {
+  element.classList.add('popup_opened');
+  document.addEventListener('keydown', handlerClickEscape);
+  page.addEventListener('click', handlerBackgroundCLose);
 };
 
-function closePopup(popupElement) {
-  popupElement.classList.remove('popup_opened');
+function closePopup (element) {
+  element.classList.remove('popup_opened');
+  document.removeEventListener('keydown', handlerClickEscape);
+  page.addEventListener('click', handlerBackgroundCLose);
+};
+
+//закрытие по нажатию на background
+function handlerBackgroundCLose(evt) {
+  if (evt.target.classList.contains('popup')) {
+     closePopup (evt.target);
+  };
+};
+
+//закрытие на esc
+const handlerClickEscape = (evt) => {
+  if (evt.key === 'Escape') {
+    const popup = page.querySelector('.popup_opened');
+    closePopup(popup);
+  };
 };
 
 function likeElements(element) {
@@ -61,7 +81,7 @@ closeButtonNameLink.addEventListener('click', function () {
   closePopup(popupAddNameLink);
 });
 
-closeButtonpopupImageFullsize.addEventListener('click', () => {
+closeButtonPopupImageFullsize.addEventListener('click',function () {
   closePopup(popupImageFullsize);
 });
 
@@ -79,7 +99,7 @@ function formSubmitHandler(evt) {
   closePopup(popupEditNameStatus);
 };
 
-formElement.addEventListener('submit', formSubmitHandler);
+popupEditUserForm.addEventListener('submit', formSubmitHandler);
 
 //второй попап (добавление/лайк/удаление карточки)
 const initialCards = [
@@ -154,6 +174,7 @@ function handleAddElementFormSubmit(event) {
   prependElement(elementsContainer, cardElement);
   profileAddForm.reset();
   closePopup(popupAddNameLink);
+  saveButtonDisabled(popupSubmitButton, config);
 }
 
 profileAddForm.addEventListener('submit', handleAddElementFormSubmit);
@@ -161,3 +182,6 @@ profileAddForm.addEventListener('submit', handleAddElementFormSubmit);
 initialCards.forEach(function (cardElement) {
   prependElement(elementsContainer, cardElement);
 });
+
+
+
