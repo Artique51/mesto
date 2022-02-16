@@ -1,6 +1,7 @@
 
 const elementsContainer = document.querySelector('.elements');
 const page = document.querySelector('.page');
+const popupOpen = document.querySelector('.popup');
 
 // первый попап(изменение имени и статуса)
 const popupEditNameStatus = document.querySelector('.popup_edit-profile');
@@ -31,17 +32,20 @@ const popupImageFullsizeImage = popupImageFullsize.querySelector('.popup__fullsi
 const popupImageFullsizeNameImage = popupImageFullsize.querySelector('.popup__fullsize-image-name');
 const closeButtonPopupImageFullsize = popupImageFullsize.querySelector('.popup__close');
 
+//переменные Template
+const elementTemplate = document.querySelector('#elements').content;
+
 //добавление функций
 function openPopup (element) {
   element.classList.add('popup_opened');
   document.addEventListener('keydown', handlerClickEscape);
-  page.addEventListener('click', handlerBackgroundCLose);
+  element.addEventListener('click', handlerBackgroundCLose);
 };
 
 function closePopup (element) {
   element.classList.remove('popup_opened');
   document.removeEventListener('keydown', handlerClickEscape);
-  page.addEventListener('click', handlerBackgroundCLose);
+  element.addEventListener('click', handlerBackgroundCLose);
 };
 
 //закрытие по нажатию на background
@@ -92,14 +96,14 @@ editButton.addEventListener('click', function () {
   jobInput.value = profileUserStatus.textContent;
 });
 
-function formSubmitHandler(evt) {
+function handleEditProfileFormSubmit(evt) {
   evt.preventDefault();
   profileUserName.textContent = nameInput.value;
   profileUserStatus.textContent = jobInput.value;
   closePopup(popupEditNameStatus);
 };
 
-popupEditUserForm.addEventListener('submit', formSubmitHandler);
+popupEditUserForm.addEventListener('submit', handleEditProfileFormSubmit);
 
 //второй попап (добавление/лайк/удаление карточки)
 const initialCards = [
@@ -131,7 +135,7 @@ const initialCards = [
 
 
 function addElement(name, link) {
-  const elementTemplate = document.querySelector('#elements').content;
+//  const elementTemplate = document.querySelector('#elements').content;
   const cardElement = elementTemplate.querySelector('.element__card').cloneNode(true);
   const imageElement = cardElement.querySelector('.element__image');
   const nameElement = cardElement.querySelector('.element__name');

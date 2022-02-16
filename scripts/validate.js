@@ -4,7 +4,7 @@ const config = {
   formSelector: '.popup__form',
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__save',
-  inactiveButtonClass: 'popup__savе_disabled',
+  inactiveButtonClass: 'popup__save_disabled',
   inputErrorClass: 'popup__input_type_error',
   errorClass: 'popup__input-error_active'
 };
@@ -33,12 +33,12 @@ const checkInputValidity = (formElement, inputElement) => {
 
 const setEventListeners = (formElement, config) => {
   const inputList = Array.from(formElement.querySelectorAll(config.inputSelector));
-  const buttonElement = formElement.querySelector(config.submitButtonSelector);
-  toggleButtonState(inputList, buttonElement, config);
+  const buttonPopup = formElement.querySelector(config.submitButtonSelector);
+  toggleButtonState(inputList, buttonPopup, config);
   inputList.forEach((inputElement) => {
     inputElement.addEventListener('input', () => {
       checkInputValidity(formElement, inputElement);
-      toggleButtonState(inputList, buttonElement, config);
+      toggleButtonState(inputList, buttonPopup, config);
     });
   });
 };
@@ -59,24 +59,24 @@ const hasInvalidInput = (inputList) => {
   })
 };
 
-const toggleButtonState = (inputList, buttonElement, config) => {
+const toggleButtonState = (inputList, buttonPopup, config) => {
   if (hasInvalidInput(inputList)) {
-    saveButtonDisabled(buttonElement, config);
+    saveButtonDisabled(buttonPopup, config);
   } else {
-    saveButtonActive(buttonElement, config);
+    saveButtonActive(buttonPopup, config);
   };
 };
 
 //функция активной кнопки
-const saveButtonActive = (buttonElement, config) => {
-  buttonElement.classList.remove(config.inactiveButtonClass);
-  buttonElement.removeAttribute('disabled');
+const saveButtonActive = (buttonPopup, config) => {
+  buttonPopup.classList.remove(config.inactiveButtonClass);
+  buttonPopup.removeAttribute('disabled');
 };
 
 //функция деактивации кнопки
-const saveButtonDisabled = (buttonElement, config) => {
-  buttonElement.classList.add(config.inactiveButtonClass);
-  buttonElement.setAttribute('disabled', '');
+const saveButtonDisabled = (buttonPopup, config) => {
+  buttonPopup.classList.add(config.inactiveButtonClass);
+  buttonPopup.setAttribute('disabled', '');
 };
 
 // Вызовем функцию
