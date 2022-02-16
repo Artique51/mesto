@@ -24,7 +24,7 @@ const closeButtonNameLink = popupAddNameLink.querySelector('.popup__close');
 const likeButton = document.querySelector('.element__like');
 const addButton = document.querySelector('.profile__add-button');
 const deleteButton = document.querySelector('.element__delete');
-const popupSubmitButton = popupAddNameLink.querySelector('.form__button-submit');
+const popupSubmitButton = popupAddNameLink.querySelector('.popup__save');
 
 //переменные попапа image-fullsize
 const popupImageFullsize = page.querySelector('.popup_value-fullsize');
@@ -175,10 +175,10 @@ function handleAddElementFormSubmit(event) {
     name: profilePlaceName.value,
     link: profilePlacePicture.value
   };
+  saveButtonDisabled(popupSubmitButton, config);
   prependElement(elementsContainer, cardElement);
   profileAddForm.reset();
   closePopup(popupAddNameLink);
-  saveButtonDisabled(popupSubmitButton, config);
 }
 
 profileAddForm.addEventListener('submit', handleAddElementFormSubmit);
