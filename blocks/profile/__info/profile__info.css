@@ -1,24 +1,23 @@
-.profile__info{
-    display: grid;
-    align-self: center;
-    grid-template-columns: 294px 24px;
-    grid-template-rows: 40px 18px;
-    grid-area: info;
-    grid-template-areas:
-    "name edit-button"
-    "status status";
-    gap: 18px;
+.profile__info {
+  margin: auto 0;
+  display: grid;
+  align-items: baseline;
+  grid-template-columns: 1fr 24px;
+  column-gap: 18px;
+  row-gap: 16px;
 }
 
-@media screen and (max-width: 680px) {
-    .profile__info {
-        grid-template-columns: 236px 36px;
-        grid-template-rows: 26px 14px;
-    /*    line-height: 27px;
-        font-size: 33px;
-        font-weight: 500;*/
-        column-gap: 10px;
-        row-gap: 14px;
-        margin: 26px 38px 36px;
-    }
+@media screen and (max-width: 750px) {
+  .profile__info {
+    margin: 0 19px;
+    grid-template-columns: 24px 1fr 24px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .profile__info {
+    grid-template-columns: 18px 1fr 18px;
+    column-gap: 10px;
+    row-gap: 7px;
+  }
 }

@@ -1,10 +1,15 @@
 .page {
-    font-family: "inter", "Arial", sans-serif;
-    max-width: 100%;
-    min-width: 320px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-    background-color:#000;
+  box-sizing: border-box;
+  font-family: Inter;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  max-width: 880px;
+  background-color: #000000;
+  color: #FFF;
+  margin: 0 auto;
 }
+
+
+
+

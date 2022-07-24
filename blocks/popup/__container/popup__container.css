@@ -1,18 +1,18 @@
 .popup__container {
-    z-index: 3;
-    position: relative;
-    width: 430px;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-    margin: 0;
+  position: relative;
+  width: 430px;
+  height: 330px;
+  background-color: #FFF;
+  color: #000;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 34px 36px 37px;
 }
 
-@media screen and (max-width: 680px) {
-    .popup__container {
-        width: 282px;
-    }
+@media screen and (max-width: 600px) {
+  .popup__container {
+    width: 282px;
+    height: 322px;
+    padding: 25px 22px;
+  }
 }
